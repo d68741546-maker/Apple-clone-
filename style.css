@@ -1,4 +1,4 @@
-/* Reset básico para limpiar márgenes por defecto */
+
 * {
     margin: 0;
     padding: 0;
@@ -11,10 +11,10 @@ body {
     color: #f5f5f7;
 }
 
-/* --- BARRA DE NAVEGACIÓN --- */
+
 .apple-nav {
     background-color: rgba(22, 22, 23, 0.8);
-    backdrop-filter: blur(20px); /* Efecto de vidrio esmerilado de Apple */
+    backdrop-filter: blur(20px);
     width: 100%;
     position: fixed;
     top: 0;
@@ -27,7 +27,7 @@ body {
 .nav-container {
     max-width: 1024px;
     margin: 0 auto;
-    height: 44px; /* Altura exacta que usa Apple */
+    height: 44px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -50,19 +50,18 @@ body {
 .nav-links {
     display: flex;
     list-style: none;
-    gap: 30px; /* Espaciado entre links */
+    gap: 30px;
 }
 
 .nav-links a:hover, .nav-logo:hover, .nav-search:hover {
     color: #ffffff;
 }
 
-/* Ocultar el botón de menú en pantallas grandes */
 .menu-toggle {
     display: none;
 }
 
-/* --- HERO SECTION --- */
+
 .hero-section {
     position: relative;
     width: 100%;
@@ -71,7 +70,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    padding-top: 100px; /* Espacio para que no lo tape el navbar fixed */
+    padding-top: 100px;
     text-align: center;
     background-color: #000000;
     overflow: hidden;
@@ -114,7 +113,7 @@ body {
     text-decoration: underline;
 }
 
-/* Espacio para la imagen del iPhone de fondo */
+
 .hero-image {
     position: absolute;
     bottom: 0;
@@ -127,21 +126,21 @@ body {
     z-index: 1;
 }
 
-/* --- RESPONSIVO (CELULARES) --- */
+
 @media (max-width: 768px) {
     .nav-links {
-        display: none; /* Oculta el menú horizontal en móviles por defecto */
+        display: none;
     }
 
     .menu-toggle {
-        display: block; /* Muestra las tres rayitas en celulares */
+        display: block;
         color: rgba(255, 255, 255, 0.8);
         font-size: 16px;
         cursor: pointer;
-        order: -1; /* Lo posiciona a la izquierda del logo si se prefiere */
+        order: -1;
     }
 
-    /* Estilo para cuando el menú se activa mediante JavaScript */
+  
     .nav-links.active {
         display: flex;
         flex-direction: column;
@@ -157,7 +156,7 @@ body {
     }
 
     .nav-links.active a {
-        font-size: 18px; /* Texto más grande para tocar fácil con el dedo */
+        font-size: 18px;
     }
 
     .hero-title {
@@ -168,7 +167,7 @@ body {
     }
 }
 
-/* Animación suave de aparición para el menú móvil */
+
 @keyframes fadeInMenu {
     from { opacity: 0; transform: translateY(-10px); }
     to { opacity: 1; transform: translateY(0); }
